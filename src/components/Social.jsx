@@ -8,7 +8,7 @@ const SocialShare = [
   // { iconName: "twitter", link: "https://twitter.com/" },
   {
     iconName: "instagram",
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/atoztests2",
   },
   // { iconName: "dribbble", link: "https://dribbble.com/" },
   // {
