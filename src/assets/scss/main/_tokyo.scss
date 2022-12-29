@@ -373,7 +373,7 @@ h6 {
   min-height: 100vh;
   float: left;
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #F7F5F7;
   @media screen and (min-width: 1601px) {
     padding-left: 450px;
   }
@@ -478,17 +478,17 @@ h6 {
   overflow: hidden;
 }
 
-// @keyframes morph {
-//   0% {
-//     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-//   }
-//   50% {
-//     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-//   }
-//   100% {
-//     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-//   }
-// }
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
 
 .tokyo_tm_home .details {
   margin-left: 80px;
@@ -918,7 +918,7 @@ h6 {
 .tokyo_tm_portfolio .portfolio_list li {
   margin: 0px 0px 50px 0px;
   float: left;
-  width: 50%;
+  width: 30%;
   padding-left: 50px;
   @media (max-width: 576px) {
     margin: 0px 0px 30px 0px;
@@ -944,7 +944,7 @@ h6 {
 }
 .tokyo_tm_portfolio .portfolio_list li .inner img {
   width: 100%;
-  height: 415px;
+  height: 215px;
   object-fit: cover;
   cursor: pointer;
   transition: 0.5s;

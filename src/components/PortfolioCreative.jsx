@@ -41,7 +41,7 @@ const Portfolio = () => {
             <Tabs>
               <TabList>
                 <Tab>All</Tab>
-                {/* <Tab>Vimeo</Tab> */}
+                <Tab>Vimeo</Tab>
                 <Tab>Photography</Tab>
                 <Tab>Youtube</Tab>
                 <Tab>Writings</Tab>
@@ -106,7 +106,7 @@ const Portfolio = () => {
                       </div>
                     </li>
                     {/* END YOUTUBE */}
-                    <SRLWrapper>
+                    {/* <SRLWrapper> */}
                       <li
                         data-aos="fade-right"
                         data-aos-duration="1200"
@@ -169,7 +169,7 @@ const Portfolio = () => {
                         </div>
                       </li>
                       {/* END SHOT */}
-                    </SRLWrapper>
+                    {/* </SRLWrapper> */}
                     <li
                       data-aos="fade-right"
                       data-aos-duration="1200"
@@ -343,7 +343,7 @@ const Portfolio = () => {
                             <a href="assets/img/portfolio/3.jpg">
                               <img
                                 src="assets/img/portfolio/3.jpg"
-                                alt="Besh Award"
+                                alt="Bessssssh Award"
                                 data-tip
                                 data-for="shot2"
                               />
