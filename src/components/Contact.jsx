@@ -18,7 +18,7 @@ const Contact = () => {
         "service_iq1m0ho",
         "contact_form",
         e.target,
-        process.env.EMAILJS_API_KEY
+        "R1PEo1p9oXka6IBcz"
       )
       .then((res) => {
         console.log(res);

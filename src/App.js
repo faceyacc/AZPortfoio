@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Routes from "./router/Routes";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import dotenv from 'dotenv'
+dotenv.config()
 
 const App = () => {
   useEffect(() => {
