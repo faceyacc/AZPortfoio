@@ -4,21 +4,21 @@ import ReactMapGL from "react-map-gl";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [viewport, setViewport] = useState({
-    latitude: 40.712776,
-    longitude: -74.005974,
-    zoom: 8,
-  });
+  // const [viewport, setViewport] = useState({
+  //   latitude: 47.6062,
+  //   longitude: -122.3321,
+  //   zoom: 8,
+  // });
 
   function sendEmail(e) {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_n4mkhz9",
-        "template_ugoztxr",
+        "service_iq1m0ho",
+        "contact_form",
         e.target,
-        "user_vYmDSd9PwIuRXUQEDjYwN"
+        process.env.EMAILJS_API_KEY
       )
       .then((res) => {
         console.log(res);
@@ -36,14 +36,15 @@ const Contact = () => {
         <div className="tokyo_tm_title">
           <div className="title_flex">
             <div className="left">
-              <span>Contact</span>
+              <span>Contact + Commission</span>
               <h3>Get in Touch</h3>
+              <h8>Interested in commission? Let's get in touch!</h8>
             </div>
           </div>
         </div>
         {/* END TITLE */}
 
-        <div className="map_wrap">
+        {/* <div className="map_wrap">
           <div className="map">
             <ReactMapGL
               mapStyle={"mapbox://style/mapbox/dark-v9"}
@@ -52,7 +53,7 @@ const Contact = () => {
               onViewportChange={(nextViewport) => setViewport(nextViewport)}
             />
           </div>
-        </div>
+        </div> */}
         {/* MENU WRAP */}
 
         <div className="fields">

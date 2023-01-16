@@ -22,7 +22,7 @@ const About = () => {
         </div> */}
         {/* END ABOUT IMAGE */}
         <div className="description">
-          <h3 className="name">About A to Z</h3>
+          <h3 className="name">Process above product</h3>
           <div className="description_inner">
             <div className="left">
               <p>

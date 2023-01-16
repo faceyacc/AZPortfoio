@@ -6,8 +6,212 @@ import ReactTooltip from "react-tooltip";
 import ModalVideo from "react-modal-video";
 import Modal from "react-modal";
 import Social from "./Social";
+import Lightbox from "react-image-lightbox";
+
+
+
+// const Portfolio = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [imagesIndex, setimagesIndex] = useState(null);
+//   const [photoIndex, setPhotoIndex] = useState(0);
+
+//   const Projects = [
+//     {
+//       id: 1,
+//       name: "Intercambiador Del Norte",
+//       images: [
+//         "https://picsum.photos/id/237/200/300",
+//         "https://picsum.photos/id/236/200/300",
+//         "https://picsum.photos/id/235/200/300",
+//         "https://picsum.photos/id/234/200/300",
+//         "https://picsum.photos/id/233/200/300"
+//       ],
+//       address: {
+//         lat: 15.553887638630355,
+//         lng: -87.9969039384759
+//       }
+//     },
+//     {
+//       id: 2,
+//       name: "Intercambiador De Occidente",
+//       images: [
+//         "https://picsum.photos/id/222/200/300",
+//         "https://picsum.photos/id/221/200/300",
+//         "https://picsum.photos/id/225/200/300",
+//         "https://picsum.photos/id/224/200/300",
+//         "https://picsum.photos/id/223/200/300"
+//       ],
+//       address: {
+//         lat: 15.43197682825506,
+//         lng: -88.02134910151912
+//       }
+//     },
+//     {
+//       id: 3,
+//       name: "Puente Peatonal IHSS",
+//       images: [
+//         "https://picsum.photos/id/137/200/300",
+//         "https://picsum.photos/id/136/200/300",
+//         "https://picsum.photos/id/135/200/300",
+//         "https://picsum.photos/id/134/200/300",
+//         "https://picsum.photos/id/133/200/300"
+//       ],
+//       address: {
+//         lat: 15.541246406040697,
+//         lng: -88.01537077792884
+//       }
+//     },
+//     {
+//       id: 4,
+//       name: "Paso A Desnivel Col. Santa Martha",
+//       images: [
+//         "https://picsum.photos/id/37/200/300",
+//         "https://picsum.photos/id/36/200/300",
+//         "https://picsum.photos/id/35/200/300",
+//         "https://picsum.photos/id/34/200/300",
+//         "https://picsum.photos/id/33/200/300"
+//       ],
+//       address: {
+//         lat: 15.497648696265482,
+//         lng: -87.98749457873993
+//       }
+//     },
+//     {
+//       id: 5,
+//       name: "Puente A Desnivel 27 Calle",
+//       images: [
+//         "https://picsum.photos/id/500/200/300",
+//         "https://picsum.photos/id/501/200/300",
+//         "https://picsum.photos/id/502/200/300",
+//         "https://picsum.photos/id/503/200/300",
+//         "https://picsum.photos/id/504/200/300"
+//       ],
+//       address: {
+//         lat: 15.478059823233426,
+//         lng: -87.97416842866024
+//       }
+//     },
+//     {
+//       id: 6,
+//       name: "Ampliación De Bulevar 33 Calle",
+//       images: [
+//         "https://picsum.photos/id/101/200/300",
+//         "https://picsum.photos/id/102/200/300",
+//         "https://picsum.photos/id/103/200/300",
+//         "https://picsum.photos/id/104/200/300",
+//         "https://picsum.photos/id/105/200/300"
+//       ],
+//       address: {
+//         lat: 15.47188476038704,
+//         lng: -88.00512399419196
+//       }
+//     },
+//     {
+//       id: 7,
+//       name: "Paso A Desnivel Blvd Del Este Con Salida Vieja A La Lima",
+//       images: [
+//         "https://picsum.photos/id/27/200/300",
+//         "https://picsum.photos/id/26/200/300",
+//         "https://picsum.photos/id/25/200/300",
+//         "https://picsum.photos/id/24/200/300",
+//         "https://picsum.photos/id/23/200/300"
+//       ],
+//       address: {
+//         lat: 15.50228931099425,
+//         lng: -87.99440008840381
+//       }
+//     },
+//     {
+//       id: 8,
+//       name:
+//         "Paso a Desnivel en la Intersección Bulevar Del Norte y Acceso A El Zapotal",
+//       images: [
+//         "https://picsum.photos/id/8/200/300",
+//         "https://picsum.photos/id/9/200/300"
+//       ],
+//       address: {
+//         lat: 15.551436185695238,
+//         lng: -88.00215568011586
+//       }
+//     }
+//   ];
+  
+//   return(
+//     <>
+//       {Projects.map((project, index) => {
+//         return (
+//         <ul className="gallery_zoom">
+//           <li data-aos="fade-right" data-aos-duration="1200">
+//              <div className="inner">
+//              <div className="entry tokyo_tm_portfolio_animation_wrap">
+            
+//           <img
+//             key={project.id}
+//             onClick={() => {
+//               setIsOpen(true);
+//               setimagesIndex(index);
+//             }}
+//             loading="lazy"
+//             className="rounded-img img-project shadow-three"
+//             src={project.images[0]}
+//             alt={project.name}
+//           />
+//           </div>
+//           </div>
+//           </li>
+//           </ul>
+//         );
+//       })}
+
+//       {isOpen && (
+//         <Lightbox
+//           imageLoadErrorMessage="This image failed to load"
+//           imageTitle={Projects[imagesIndex].name}
+//           mainSrc={Projects[imagesIndex].images[photoIndex]}
+//           nextSrc={
+//             Projects[imagesIndex].images[
+//               (photoIndex + 1) % Projects[imagesIndex].images.length
+//             ]
+//           }
+//           prevSrc={
+//             Projects[imagesIndex].images[
+//               (photoIndex + Projects[imagesIndex].images.length - 1) %
+//                 Projects[imagesIndex].images.length
+//             ]
+//           }
+//           onCloseRequest={() => {
+//             setIsOpen(false);
+//             setimagesIndex(null);
+//           }}
+//           onMovePrevRequest={() =>
+//             setPhotoIndex(
+//               (photoIndex + Projects[imagesIndex].images.length - 1) %
+//                 Projects[imagesIndex].images.length
+//             )
+//           }
+//           onMoveNextRequest={() =>
+//             setPhotoIndex(
+//               (photoIndex + 1) % Projects[imagesIndex].images.length
+//             )
+//           }
+//         />
+//       )}
+//     </>
+//   )
+
+// }
+
+
 
 const Portfolio = () => {
+  const photos = [
+    {src: "assets/img/portfolio/House No.12 .png", alt: "House No. 1"},
+    {src: "assets/img/portfolio/House No.13.png", alt: "House No. 2"},
+    {src: "assets/img/portfolio/House No. 11.jpg", alt: "House No. 3"},
+
+  ]
+
+
   // for popup video
   const [isOpen, setOpen] = useState(false);
   const [isOpen2, setOpen2] = useState(false);
@@ -25,7 +229,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <SimpleReactLightbox>
+      {/* <SimpleReactLightbox> */}
         <div className="tokyo_tm_portfolio">
           <div className="tokyo_tm_title">
             <div className="title_flex">
@@ -42,271 +246,60 @@ const Portfolio = () => {
               {/* END TABLIST */}
               <div className="list_wrapper">
                 <TabPanel>
-                  <ul className="portfolio_list">
-                    <li data-aos="fade-right" data-aos-duration="1200">
-                      <div className="inner">
-                        <div className="entry tokyo_tm_portfolio_animation_wrap">
-                          <img
-                            src="assets/img/portfolio/5.jpg"
-                            alt="Vimeo"
-                            data-tip
-                            data-for="vimeo"
-                            onClick={() => setOpen2(true)}
-                          />
-                          <ReactTooltip
-                            id="vimeo"
-                            place="bottom"
-                            type="light"
-                            effect="float"
-                            className="tooltip-wrapper"
-                          >
-                            <div>
-                              <h5>Teresa Butler</h5>
-                              <span>Vimeo</span>
-                            </div>
-                          </ReactTooltip>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END VIMEO */}
-                    <li
-                      data-aos="fade-right"
-                      data-aos-duration="1200"
-                      data-aos-delay="100"
-                    >
-                      <div className="inner">
-                        <div className="entry tokyo_tm_portfolio_animation_wrap">
-                          <img
-                            src="assets/img/portfolio/2.jpg"
-                            alt="Youtube"
-                            data-tip
-                            data-for="youtube"
-                            onClick={() => setOpen(true)}
-                          />
-                          <ReactTooltip
-                            id="youtube"
-                            place="bottom"
-                            type="light"
-                            effect="float"
-                            className="tooltip-wrapper"
-                          >
-                            <div>
-                              <h5>Ashely Flores</h5>
-                              <span>Youtube</span>
-                            </div>
-                          </ReactTooltip>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END YOUTUBE */}
-                    {/* <SRLWrapper> */}
-                      <li
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        data-aos-delay="200"
-                      >
-                        <div className="inner">
-                          <div className="entry tokyo_tm_portfolio_animation_wrap">
-                            <a href="assets/img/portfolio/4.jpg">
-                              <img
-                                src="assets/img/portfolio/4.jpg"
-                                alt="Childhood"
-                                data-tip
-                                data-for="shot"
-                              />
-                              <ReactTooltip
-                                id="shot"
-                                place="bottom"
-                                type="light"
-                                effect="float"
-                                className="tooltip-wrapper"
-                              >
-                                <div>
-                                  <h5>Derek Smith</h5>
-                                  <span>Shot</span>
-                                </div>
-                              </ReactTooltip>
-                            </a>
-                          </div>
-                        </div>
-                      </li>
-                      {/* END SHOT */}
-                      <li
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        data-aos-delay="300"
-                      >
-                        <div className="inner">
-                          <div className="entry tokyo_tm_portfolio_animation_wrap">
-                            <a href="assets/img/portfolio/3.jpg">
-                              <img
-                                src="assets/img/portfolio/3.jpg"
-                                alt="Besh Award"
-                                data-tip
-                                data-for="shot2"
-                              />
-                            </a>
-                            <ReactTooltip
-                              id="shot2"
-                              place="bottom"
-                              type="light"
-                              effect="float"
-                              className="tooltip-wrapper"
-                            >
-                              <div>
-                                <h5>Gloria jenkins</h5>
-                                <span>Shot</span>
-                              </div>
-                            </ReactTooltip>
-                          </div>
-                        </div>
-                      </li>
-                      {/* END SHOT */}
-                    {/* </SRLWrapper> */}
-                    <li
-                      data-aos="fade-right"
-                      data-aos-duration="1200"
-                      data-aos-delay="100"
-                    >
-                      <div className="inner">
-                        <div className="entry tokyo_tm_portfolio_animation_wrap">
-                          <img
-                            src="assets/img/portfolio/6.jpg"
-                            alt="Details"
-                            data-tip
-                            data-for="detail"
-                            onClick={toggleModalThree}
-                          />
+                  <div className="portfolio_list">                                        
+                    {photos.map(photo => (
+                      <SimpleReactLightbox>
+                        <SRLWrapper key={photo.src}>
+                        <li data-aos="fade-right" data-aos-duration="1200">
+                          <div className="inner">
+                            <div className="entry tokyo_tm_portfolio_animation_wrap">
+                              <a>
+                                <img
+                                  src={photo.src}
+                                  alt={photo.alt}
+                                  data-tip
+                                  data-for="shot"
+                                />
 
-                          <ReactTooltip
-                            id="detail"
-                            place="bottom"
-                            type="light"
-                            effect="float"
-                            className="tooltip-wrapper"
-                          >
-                            <div>
-                              <h5>Selena Gomez</h5>
-                              <span>Details</span>
+                                {/* {photos.map((imgSrc, index) => (<img src={imgSrc.src} key={index} alt={imgSrc.alt}/>))} */}
+                                
+                              </a>
+                                {/* <ReactTooltip
+                                  id="shot"
+                                  place="bottom"
+                                  type="light"
+                                  effect="float"
+                                  className="tooltip-wrapper"
+                                >
+                                  <div>
+                                    <h5>Hose No 1</h5>
+                                    <span>Shot</span>
+                                  </div>
+                                </ReactTooltip> */}
                             </div>
-                          </ReactTooltip>
-                        </div>
-                      </div>
-                    </li>
-                    {/* END DETAILS */}
-                    <li
-                      data-aos="fade-right"
-                      data-aos-duration="1200"
-                      data-aos-delay="200"
-                    >
-                      <div className="inner">
-                        <div className="entry tokyo_tm_portfolio_animation_wrap">
-                          <img
-                            src="assets/img/portfolio/7.jpg"
-                            alt="Details"
-                            data-tip
-                            data-for="detail2"
-                            onClick={toggleModalFour}
-                          />
-
-                          <ReactTooltip
-                            id="detail2"
-                            place="bottom"
-                            type="light"
-                            effect="float"
-                            className="tooltip-wrapper"
-                          >
-                            <div>
-                              <h5>Ave Simone</h5>
-                              <span>Details</span>
-                            </div>
-                          </ReactTooltip>
-                        </div>
-                      </div>
-                    </li>
-                    <SRLWrapper>
-                      <li data-aos="fade-right" data-aos-duration="1200">
-                        <div className="inner">
-                          <div className="entry tokyo_tm_portfolio_animation_wrap">
-                            <a href="assets/img/portfolio/4.jpg">
-                              <img
-                                src="assets/img/portfolio/4.jpg"
-                                alt="Childhood"
-                                data-tip
-                                data-for="shot"
-                              />
-                              <ReactTooltip
-                                id="shot"
-                                place="bottom"
-                                type="light"
-                                effect="float"
-                                className="tooltip-wrapper"
-                              >
-                                <div>
-                                  <h5>Derek Smith</h5>
-                                  <span>Shot</span>
-                                </div>
-                              </ReactTooltip>
-                            </a>
                           </div>
-                        </div>
-                      </li>
-                      {/* END SHOT */}
-                      <li
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        data-aos-delay="100"
-                      >
-                        <div className="inner">
-                          <div className="entry tokyo_tm_portfolio_animation_wrap">
-                            <a href="assets/img/portfolio/3.jpg">
-                              <img
-                                src="assets/img/portfolio/3.jpg"
-                                alt="Bessssssh Award"
-                                data-tip
-                                data-for="shot2"
-                              />
-                            </a>
-                            <ReactTooltip
-                              id="shot2"
-                              place="bottom"
-                              type="light"
-                              effect="float"
-                              className="tooltip-wrapper"
-                            >
-                              <div>
-                                <h5>Gloria jenkins</h5>
-                                <span>Shot</span>
-                              </div>
-                            </ReactTooltip>
-                          </div>
-                        </div>
-                      </li>
-                      {/* END SHOT */}
-                    </SRLWrapper>
-                    {/* END DETAILS */}
-                  </ul>
-                  {/* END PORTFOLIO LIST */}
+                        </li>
+                        </SRLWrapper>
+                     </SimpleReactLightbox>
+                    ))}
+                  </div>
                 </TabPanel>
-                {/* END ALL PORTFOLIO GALLERY */}
-
-
-                {/* END CREATIVE PORTFOLIO GALLERY */}
               </div>
-              {/* END LIST WRAPPER */}
             </Tabs>
           </div>
         </div>
-      </SimpleReactLightbox>
+      
+
+
 
       {/* all modal video and popup goes here */}
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay
         isOpen={isOpen}
         videoId="1gyTUHP6ne8"
         onClose={() => setOpen(false)}
-      />
+      /> */}
       {/* <ModalVideo
         channel="vimeo"
         autoplay
