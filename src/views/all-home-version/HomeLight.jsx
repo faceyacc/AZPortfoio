@@ -67,10 +67,10 @@ const HomeLight = () => {
                     <span className="menu_content">Home</span>
                   </Tab>
                   
-                  <Tab>
+                  {/* <Tab>
    
                     <span className="menu_content">About</span>
-                  </Tab>
+                  </Tab> */}
 
 
                   <Tab>
@@ -132,7 +132,7 @@ const HomeLight = () => {
                 </TabPanel>
                 {/* END HOME MENU TAB CONTENT */}
 
-                <TabPanel>
+                {/* <TabPanel>
                   <div
                     data-aos="fade-right"
                     data-aos-duration="1200"
@@ -140,7 +140,7 @@ const HomeLight = () => {
                   >
                     <About />
                   </div>
-                </TabPanel>
+                </TabPanel> */}
                 {/* END ABOUT MENU TAB CONTENT */}
 
                 <TabPanel>
