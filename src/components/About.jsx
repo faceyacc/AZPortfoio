@@ -22,28 +22,25 @@ const About = () => {
         </div> */}
         {/* END ABOUT IMAGE */}
         <div className="description">
-          <h3 className="name">Process above product</h3>
+          <h3 className="name">"Process above product"</h3>
           <div className="description_inner">
             <div className="left">
               <p>
-                At vero eos et accusamus et iusto odio dignissimos 
-                ducimus qui blanditiis praesentium voluptatum deleniti
-                atque corrupti quos dolores et quas molestias excepturi 
-                sint occaecati cupiditate non provident, similique sunt
+              A to Z Studio is a multi-faceted, collaborative, and creative team run by Angelica and Zach, who  met in Architecture school. After graduation, they both wanted to stay productive and clutch on their creative selves. What started as a personal and humble project then turned into a project for a new “school of thought.” In August 2022, they decided to work together again by combining Angelica’s talent for hand drawing, Zach’s vision for animation, and their passion for design. 
+
               </p>
-              <div className="tokyo_tm_button">
+              {/* <div className="tokyo_tm_button">
                 <button onClick={toggleModal} className="ib-button">
                   Read More
                 </button>
-              </div>
+              </div> */}
               {/* END TOKYO BUTTON */}
             </div>
             {/* END LEFT */}
             <div className="right">
               <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-              accusantium doloremque laudantium, totam rem aperiam, eaque 
-              ipsa quae ab illo inventore veritatis et quasi          
+              A to Z Studio promotes the duo’s specialties and passion in art, animation, design, and more through various projects and series. The goal is to continue lighting Angelica’s and Zach’s creative torches and sharing it with friends, family, and others. 
+     
               </p>
          
               {/* END UL */}

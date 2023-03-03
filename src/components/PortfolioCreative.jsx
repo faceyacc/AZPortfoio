@@ -201,14 +201,20 @@ import Lightbox from "react-image-lightbox";
 
 // }
 
-
-
 const Portfolio = () => {
   const photos = [
-    {src: "assets/img/portfolio/House No.12 .png", alt: "House No. 1"},
-    {src: "assets/img/portfolio/House No.13.png", alt: "House No. 2"},
-    {src: "assets/img/portfolio/House No. 11.jpg", alt: "House No. 3"},
-
+    {src: "assets/img/portfolio/house1.png", alt: "House No. 1"},
+    {src: "assets/img/portfolio/house2.png", alt: "House No. 2"},
+    {src: "assets/img/portfolio/house4.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house4.png", alt: "House No. 1"},
+    {src: "assets/img/portfolio/house5.png", alt: "House No. 2"},
+    {src: "assets/img/portfolio/house6.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house6.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house8.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house9.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house10.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house11.png", alt: "House No. 3"},
+    {src: "assets/img/portfolio/house12.png", alt: "House No. 3"},
   ]
 
 

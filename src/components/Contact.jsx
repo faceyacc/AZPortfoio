@@ -66,12 +66,12 @@ const Contact = () => {
                 {/* END FIRST NAME */}
 
                 <li>
-                  <input type="email" name="user_email" placeholder="Email" />
+                  <input type="email" name="user_email" placeholder="Best Email to reach you" />
                 </li>
                 {/* END EMAIL */}
 
                 <li>
-                  <textarea name="message" placeholder="Message"></textarea>
+                  <textarea name="message" placeholder="Shoot us an email and we will get back to you as soon as possible :)"></textarea>
                 </li>
                 {/* END SUBJECT MESSAGE */}
               </ul>

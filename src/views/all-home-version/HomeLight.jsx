@@ -66,14 +66,13 @@ const HomeLight = () => {
                     /> */}
                     <span className="menu_content">Home</span>
                   </Tab>
+                  
                   <Tab>
-                    {/* <img
-                      className="svg"
-                      src="/assets/img/svg/avatar.svg"
-                      alt="avatar"
-                    /> */}
+   
                     <span className="menu_content">About</span>
                   </Tab>
+
+
                   <Tab>
                     {/* <img
                       className="svg"
