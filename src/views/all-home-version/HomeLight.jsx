@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import Home from "../../components/Home";
 import About from "../../components/About";
 import Portfolio from "../../components/PortfolioCreative";
-import News from "../../components/News";
 import Contact from "../../components/Contact";
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
+
 
 const HomeLight = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false)
   const handleLabelClick = () => {
     if (isDark) {
       localStorage.setItem("theme-color", "light");
@@ -22,10 +23,44 @@ const HomeLight = () => {
       document.querySelector("body").classList.remove("-light");
       setIsDark(true);
     }
+  }
+
+  // Hover dropdown menu
+  const [isHover, toggleHover] = useState(false)
+
+  const toggleHoverMenu = () => {
+    toggleHover(!isHover);
   };
+
+  const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      rotateX: 0,
+      transition: {
+        duration: 0.3
+      },
+      display: "block"
+    },
+    exit: {
+      opacity: 0,
+      rotateX: -15,
+      transition: {
+        duration: 0.5,
+        delay: 0.3
+      },
+      transitionEnd: {
+        display: "none"
+      }
+    }
+  };
+
+
+  const MotionTab = motion(Tab)
+
+
   return (
     <>
-      {/* Start Dark & Light Mode Swicher  */}
+      
       <label
         className={`theme-switcher-label d-flex  ${isDark ? "active" : ""}`}
       >
@@ -43,10 +78,9 @@ const HomeLight = () => {
           </i>
         </div>
       </label>
-      {/* End Dark & Light Mode Swicher  */}
-      <Tabs>
+      
+      <Tabs  defaultIndex={1}>
         <TabList>
-          {/* START LEFT MENU CONTENT */}
           <div className="leftpart">
             <div className="leftpart_inner">
               <div className="logo">
@@ -54,104 +88,55 @@ const HomeLight = () => {
                   <img src="/assets/img/logo/logo.png" alt="brand" />
                 </Link>
               </div>
-              {/* END LOGO */}
-
               <div className="menu">
                 <ul>
                   <Tab>
-                    {/* <img
-                      className="svg"
-                      src="/assets/img/svg/home-run.svg"
-                      alt="homerun"
-                    /> */}
                     <span className="menu_content">Home</span>
                   </Tab>
-                  
-                  {/* <Tab>
-   
-                    <span className="menu_content">About</span>
-                  </Tab> */}
-
-
+                
+                
                   <Tab>
-                    {/* <img
-                      className="svg"
-                      src="/assets/img/svg/briefcase.svg"
-                      alt="briefcase"
-                    /> */}
-                    <span className="menu_content">Series</span>
+                    <motion.div     
+                      className="menu-item"
+                      onHoverStart={toggleHoverMenu}
+                      onHoverEnd={toggleHoverMenu}
+                    >
+                        <span className="menu_content">Series</span>
+                      <motion.div
+                        className="sub-menu"
+                        initial="exit"
+                        animate={isHover ? "enter" : "exit"}
+                        variants={subMenuAnimate}
+                      >
+                        <li><a href="/House">Submenu Item 1</a></li>
+                        <li><a href="/Absence" >Submenu Item 2</a></li>
+                      </motion.div>
+                    </motion.div>
                   </Tab>
-                  {/* <Tab>
-                    <img
-                      className="svg"
-                      src="/assets/img/svg/paper.svg"
-                      alt="paper"
-                    />
-                    <span className="menu_content">News</span>
-                  </Tab> */}
+
                   <Tab>
-                    {/* <img
-                      className="svg"
-                      src="/assets/img/svg/mail.svg"
-                      alt="mail"
-                    /> */}
-                    <span className="menu_content"> Contact</span>
+                    <span className="menu_content">Contact</span>
                   </Tab>
                 </ul>
               </div>
-              {/* END MENU */}
-
-              {/* <div className="copyright">
-                <p>
-                  &copy; {new Date().getFullYear()} Tokyo <br /> Created by
-                  <a
-                    href="https://themeforest.net/user/ib-themes"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Ib-Themes
-                  </a>
-                </p>
-              </div> */}
-              {/* END COPYRIGHT */}
             </div>
           </div>
-          {/* END LEFT MENU CONTENT */}
         </TabList>
-        {/* END SIDEBAR TABLIST */}
 
-        {/* START RIGHT PART CONTENT */}
         <div className="rightpart">
           <div className="rightpart_in">
             <div className="tokyo_tm_section">
               <div className="container">
-                <TabPanel>
+                <TabPanel >
                   <div data-aos="fade-right" data-aos-duration="1200">
                     <Home />
                   </div>
                 </TabPanel>
-                {/* END HOME MENU TAB CONTENT */}
-
-                {/* <TabPanel>
-                  <div
-                    data-aos="fade-right"
-                    data-aos-duration="1200"
-                    data-aos-delay="100"
-                  >
-                    <About />
-                  </div>
-                </TabPanel> */}
-                {/* END ABOUT MENU TAB CONTENT */}
 
                 <TabPanel>
-                  <Portfolio />
+                  <Portfolio/>
                 </TabPanel>
-                {/* END PORTFOLIO MENU TAB CONTENT */}
 
-                {/* <TabPanel>
-                  <News />
-                </TabPanel> */}
-                {/* END NEWS MENU TAB CONTENT */}
 
                 <TabPanel>
                   <div
@@ -162,14 +147,14 @@ const HomeLight = () => {
                     <Contact />
                   </div>
                 </TabPanel>
-                {/* END CONTACT MENU TAB CONTENT */}
+                
               </div>
             </div>
           </div>
         </div>
-        {/* END RIGHT PART CONTENT */}
+        
       </Tabs>
-      {/* END TABS */}
+
     </>
   );
 };

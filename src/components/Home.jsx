@@ -20,9 +20,9 @@ const Home = () => {
           <div className="details">
             <h3 className="name">A to Z Studio</h3>
             <p className="job">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volup
+              Hi! Angelica and Zach here. She likes to draw, he likes to animate, and together, we are A to Z Studio.
+              Welcome to our multifaceted and explorative studio where we combine our love for art, design, animation 
+              & more! We are an artist-duo that enjoys creating and building anything between the letters A to Z.
             </p>
             {/* END JOB */}
             <Social />
