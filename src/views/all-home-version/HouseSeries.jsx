@@ -109,7 +109,7 @@ const House = () => {
                         >
                           <div className="dropdown_menue_container">
                             <li><a href="/House">House</a></li>
-                            <li><a href="/Absence" >Absexxxnce</a></li>
+                            <li><a href="/Absence" >Absence</a></li>
                           </div> 
                         </motion.div>
                       </motion.div>
