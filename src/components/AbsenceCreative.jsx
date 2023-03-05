@@ -10,31 +10,13 @@ const Absence = () => {
     {src: "assets/img/portfolio/absence/wood.png", alt: "Wood"},
   ]
 
-
-  // for popup video
-  const [isOpen, setOpen] = useState(false);
-  const [isOpen2, setOpen2] = useState(false);
-
-  // for modal
-  const [isOpen3, setIsOpen3] = useState(false);
-  const [isOpen4, setIsOpen4] = useState(false);
-
-  function toggleModalThree() {
-    setIsOpen3(!isOpen3);
-  }
-  function toggleModalFour() {
-    setIsOpen4(!isOpen4);
-  }
-
   return (
     <>
         <div className="tokyo_tm_portfolio">
           <div className="tokyo_tm_title">
             <div className="absence_title">
               <div className="left">
-                {/* <span>House Series</span> */}
-                <h3>Absence</h3>
-               
+                <h3  data-aos="fade-down" data-aos-duration="1200">Absence</h3>
               </div>
             </div>
           </div>

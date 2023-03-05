@@ -386,7 +386,7 @@ li a:hover { text-decoration: none; color:rgb(0, 0, 0); }
   min-height: 100vh;
   float: left;
   position: relative;
-  background-color: #F7F5F7;
+  background-color: #f8f8f8;
   @media screen and (min-width: 1601px) {
     padding-left: 450px;
   }
@@ -959,6 +959,7 @@ li a:hover { text-decoration: none; color:rgb(0, 0, 0); }
 
 .absence_title h3 {
   align-items: center;
+  padding-left: 42%;
 }
 
 .tokyo_tm_portfolio .portfolio_list li {

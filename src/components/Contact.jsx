@@ -44,18 +44,6 @@ const Contact = () => {
         </div>
         {/* END TITLE */}
 
-        {/* <div className="map_wrap">
-          <div className="map">
-            <ReactMapGL
-              mapStyle={"mapbox://style/mapbox/dark-v9"}
-              mapboxApiAccessToken="pk.eyJ1IjoiYmF5YXppZGgiLCJhIjoiY2tvemdwc3ByMDg1YzJubzQxcDR0cDR3dyJ9.s1zXEb5OPqgBDcmupj3GBA"
-              {...viewport}
-              onViewportChange={(nextViewport) => setViewport(nextViewport)}
-            />
-          </div>
-        </div> */}
-        {/* MENU WRAP */}
-
         <div className="fields">
           <form className="contact_form" onSubmit={sendEmail}>
             <div className="first">
@@ -69,6 +57,10 @@ const Contact = () => {
                   <input type="email" name="user_email" placeholder="Best Email to reach you" />
                 </li>
                 {/* END EMAIL */}
+
+                <li>
+                  <input type="text" name="name" placeholder="Subject" />
+                </li>
 
                 <li>
                   <textarea name="message" placeholder="Shoot us an email and we will get back to you as soon as possible :)"></textarea>
