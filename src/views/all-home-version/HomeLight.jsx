@@ -89,7 +89,7 @@ const HomeLight = () => {
               <div className="menu">
                 <ul>
                   <Tab>
-                    <span className="menu_content">Hossme</span>
+                    <span className="menu_content">Home</span>
                   </Tab>
                 
                   <Tab>
