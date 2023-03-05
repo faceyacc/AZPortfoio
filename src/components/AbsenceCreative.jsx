@@ -30,10 +30,11 @@ const Absence = () => {
     <>
         <div className="tokyo_tm_portfolio">
           <div className="tokyo_tm_title">
-            <div className="title_flex">
+            <div className="absence_title">
               <div className="left">
                 {/* <span>House Series</span> */}
-                <h3>House Series</h3>
+                <h3>Absence</h3>
+               
               </div>
             </div>
           </div>
@@ -44,10 +45,10 @@ const Absence = () => {
               {/* END TABLIST */}
               <div className="list_wrapper">
                 <TabPanel>
-                  <div className="portfolio_list">                                        
+                  <div className="absence_portfolio_view">                                        
                     {photos.map(photo => (
                         <li data-aos="fade-right" data-aos-duration="1200">
-                          <div className="inner">
+                          <div>
                             <div className="entry tokyo_tm_portfolio_animation_wrap">
                               <a>
                                 <img

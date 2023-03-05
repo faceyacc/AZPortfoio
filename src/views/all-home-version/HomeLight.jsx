@@ -3,10 +3,9 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Home from "../../components/Home";
-import About from "../../components/About";
 import Portfolio from "../../components/PortfolioCreative";
 import Contact from "../../components/Contact";
-import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 
 const HomeLight = () => {
@@ -60,7 +59,6 @@ const HomeLight = () => {
 
   return (
     <>
-      
       <label
         className={`theme-switcher-label d-flex  ${isDark ? "active" : ""}`}
       >
@@ -79,21 +77,20 @@ const HomeLight = () => {
         </div>
       </label>
       
-      <Tabs  defaultIndex={1}>
+      <Tabs  defaultIndex={0}>
         <TabList>
           <div className="leftpart">
             <div className="leftpart_inner">
               <div className="logo">
-                <Link className="navbar-brand" to="/">
+                <a className="navbar-brand" href="/">
                   <img src="/assets/img/logo/logo.png" alt="brand" />
-                </Link>
+                </a>
               </div>
               <div className="menu">
                 <ul>
                   <Tab>
                     <span className="menu_content">Home</span>
                   </Tab>
-                
                 
                   <Tab>
                     <motion.div     
@@ -108,8 +105,10 @@ const HomeLight = () => {
                         animate={isHover ? "enter" : "exit"}
                         variants={subMenuAnimate}
                       >
-                        <li><a href="/House">Submenu Item 1</a></li>
-                        <li><a href="/Absence" >Submenu Item 2</a></li>
+                        <div className="dropdown_menue_container">
+                          <li><a href="/House">House</a></li>
+                          <li><a href="/Absence" >Absence</a></li>
+                        </div> 
                       </motion.div>
                     </motion.div>
                   </Tab>

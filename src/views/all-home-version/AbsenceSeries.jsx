@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Home from "../../components/Home";
-import Portfolio from "../../components/PortfolioCreative";
+
 import Absence from "../../components/AbsenceCreative";
 import Contact from "../../components/Contact";
 import {motion} from 'framer-motion/dist/framer-motion'
@@ -108,8 +108,10 @@ const House = () => {
                           animate={isHover ? "enter" : "exit"}
                           variants={subMenuAnimate}
                         >
-                            <li><a href="/House">House</a></li>
-                            <li><a href="/Absence" >Absence</a></li>
+                        <div className="dropdown_menue_container">
+                          <li><a href="/House">House</a></li>
+                          <li><a href="/Absence" >Absence</a></li>
+                        </div> 
                         </motion.div>
                       </motion.div>
                     </Tab>

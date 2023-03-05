@@ -107,8 +107,10 @@ const House = () => {
                           animate={isHover ? "enter" : "exit"}
                           variants={subMenuAnimate}
                         >
+                          <div className="dropdown_menue_container">
                             <li><a href="/House">House</a></li>
                             <li><a href="/Absence" >Absence</a></li>
+                          </div> 
                         </motion.div>
                       </motion.div>
                     </Tab>

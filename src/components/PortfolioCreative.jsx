@@ -36,24 +36,36 @@ const Portfolio = () => {
     setIsOpen4(!isOpen4);
   }
 
+  
+
   return (
     <>
         <div className="tokyo_tm_portfolio">
           <div className="tokyo_tm_title">
-            <div className="title_flex">
+            <div className="series_title">
               <div className="left">
                 {/* <span>House Series</span> */}
-                <h3>House Series</h3>
+                <h3 className="series_title" data-aos="fade-down" data-aos-duration="1200">House</h3>
+                <p data-aos="fade-down" data-aos-duration="1200">“The house has grown into a knowledgeable witness. 
+                    It has been party to early seductions, it has watched homework being written,
+                    it has observed swaddled babies freshly arrived from hospital, it has been surprised
+                    in the middle of the night by whispered conferences in the kitchen. It has 
+                    experienced winter evenings when its windows were as cold as bags of frozen
+                     peas and midsummer dusks when its brick walls held the warmth of newly baked bread”. 
+                    </p>
+                    <p data-aos="fade-down" data-aos-duration="1200">- Alain de Botton</p>
               </div>
             </div>
           </div>
           {/* END TOKYO_TM_TITLE */}
 
           <div className="portfolio_filter">
+            
             <Tabs>
               {/* END TABLIST */}
               <div className="list_wrapper">
                 <TabPanel>
+                  
                   <div className="portfolio_list">                                        
                     {photos.map(photo => (
                         <li data-aos="fade-right" data-aos-duration="1200">
